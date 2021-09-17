@@ -1,6 +1,6 @@
 var today = moment().format("[Today is ]MMM Do, YYYY");
 var currentHour = moment().hour();
-// var timeBlockHr = $(".textarea").value;
+// var timeBlockHr = $("");
 // var timeBlockArr = [];
 
 // console.log(timeBlockHr);
@@ -10,6 +10,8 @@ $("#currentDay").text(today);
 // I want to find the hour for each time-block
 // I want to compare the time-block hour to the current hour
 // change the color of the textarea for past, present and future
+
+
 
 if (9 < (currentHour)) {
   $("#09").addClass("past")
@@ -83,17 +85,14 @@ if (moment(17).isBefore(currentHour)) {
   $("#17").addClass("present")
 };
 
-var saveBtn = $(".saveBtn")
-
-saveBtn.on("click", function(event) {
-  event.preventDefault;
-  var description = $(".description").value;
-  console.log(description);
-
+// When save button is clicked, store description text in local storage.
+function save(event) {
+  var description = $("textarea").val();
+  var saveBtn = $(event.target);
   
-})
+  console.log(description);
+}
 
-// function save(event) {
-//   event.target.sibling("textarea");
-//   console.log(event.target.sibling("textarea"));
-// }
+var container = $(".container")
+
+container.on("click", ".saveBtn", save);
