@@ -1,7 +1,5 @@
-var today = moment().format("[Today is ]MMM Do, YYYY");
+var today = moment().format("dddd, MMM Do, YYYY");
 var currentHour = moment().hour();
-// var timeBlockHr = $("");
-// var timeBlockArr = [];
 
 // console.log(timeBlockHr);
 

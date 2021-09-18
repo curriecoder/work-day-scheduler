@@ -23,6 +23,8 @@ textarea {
 
 .description {
   white-space: pre-wrap;
+  height: 80px;
+
 }
 
 .time-block {
@@ -63,6 +65,7 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  height: 80px;
 }
 
 .saveBtn i:hover {
